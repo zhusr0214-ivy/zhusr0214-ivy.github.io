@@ -5,87 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sirui Zhu | Ivy</title>
     <style>
-        /* 基础设置：符合你喜欢的干净、白蓝审美 */
+       /* 全局背景：建议用一个淡淡的渐变，或者一张高斯模糊的建筑摄影图 */
         body {
             margin: 0;
-            font-family: 'Helvetica Neue', Arial, sans-serif;
-            background-color: #ffffff;
-            color: #333;
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* 极简淡蓝渐变 */
             display: flex;
             min-height: 100vh;
+            color: #2d3436;
         }
 
-        /* 左侧固定分栏：个人信息 */
+        /* 侧边栏：磨砂效果 */
         .sidebar {
             width: 300px;
             padding: 40px;
-            border-right: 1px solid #f0f0f0;
-            background-color: #fafafa;
+            background: rgba(255, 255, 255, 0.4); /* 半透明白 */
+            backdrop-filter: blur(10px); /* 核心：磨砂模糊 */
+            -webkit-backdrop-filter: blur(10px);
+            border-right: 1px solid rgba(255, 255, 255, 0.3);
             display: flex;
             flex-direction: column;
+            z-index: 10;
         }
 
-        .sidebar h1 {
-            font-size: 24px;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-        }
-
-        .sidebar p {
-            color: #666;
-            line-height: 1.6;
-            font-size: 14px;
-        }
-
-        /* 右侧内容区：1234 模块 */
+        /* 右侧网格容器 */
         .main-content {
             flex: 1;
-            padding: 40px;
+            padding: 60px;
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 2x2 网格 */
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            align-content: center;
         }
 
-        /* 模块样式 */
+        /* 磨砂卡片样式 */
         .card {
-            border: 1px solid #e0e0e0;
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            background: rgba(255, 255, 255, 0.2); /* 极低透明度 */
+            backdrop-filter: blur(15px); /* 更深层的模糊 */
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.4); /* 亮边框模拟玻璃边缘 */
+            border-radius: 20px; /* 圆角增加高级感 */
+            padding: 40px;
             text-align: center;
-            transition: all 0.3s ease;
-            cursor: pointer;
             text-decoration: none;
-            color: inherit;
+            color: #2d3436;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07); /* 柔和阴影 */
         }
 
-        /* 悬停效果：淡淡的蓝色 */
+        /* 悬停时的交互：更亮、轻微放大 */
         .card:hover {
-            border-color: #ADD8E6;
-            background-color: #f0f8ff;
-            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.4);
+            transform: translateY(-8px);
+            border-color: rgba(173, 216, 230, 0.8); /* 淡淡的蓝色边缘 */
+            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
         }
 
         .card h2 {
-            font-size: 40px;
+            font-size: 3rem;
             margin: 0;
-            color: #ADD8E6; /* 你喜欢的浅蓝色 */
+            font-weight: 300;
+            color: #ADD8E6; /* 你最爱的淡蓝色 */
+            opacity: 0.8;
         }
 
         .card span {
-            margin-top: 10px;
-            font-size: 16px;
-            letter-spacing: 2px;
+            display: block;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            letter-spacing: 0.15rem;
             text-transform: uppercase;
-        }
-
-        /* 移动端适配 */
-        @media (max-width: 768px) {
-            body { flex-direction: column; }
-            .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #eee; }
-            .main-content { grid-template-columns: 1fr; }
+            font-weight: 500;
+            color: #636e72;
         }
     </style>
 </head>
