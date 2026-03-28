@@ -1,110 +1,84 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sirui Zhu | Ivy</title>
+    <title>Sirui Zhu (Ivy) | Academic Homepage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-       /* 全局背景：建议用一个淡淡的渐变，或者一张高斯模糊的建筑摄影图 */
-        body {
-            margin: 0;
-            font-family: 'Inter', -apple-system, sans-serif;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* 极简淡蓝渐变 */
-            display: flex;
-            min-height: 100vh;
-            color: #2d3436;
-        }
-
-        /* 侧边栏：磨砂效果 */
-        .sidebar {
-            width: 300px;
-            padding: 40px;
-            background: rgba(255, 255, 255, 0.4); /* 半透明白 */
-            backdrop-filter: blur(10px); /* 核心：磨砂模糊 */
-            -webkit-backdrop-filter: blur(10px);
-            border-right: 1px solid rgba(255, 255, 255, 0.3);
-            display: flex;
-            flex-direction: column;
-            z-index: 10;
-        }
-
-        /* 右侧网格容器 */
-        .main-content {
-            flex: 1;
-            padding: 60px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
-            align-content: center;
-        }
-
-        /* 磨砂卡片样式 */
-        .card {
-            background: rgba(255, 255, 255, 0.2); /* 极低透明度 */
-            backdrop-filter: blur(15px); /* 更深层的模糊 */
-            -webkit-backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.4); /* 亮边框模拟玻璃边缘 */
-            border-radius: 20px; /* 圆角增加高级感 */
-            padding: 40px;
-            text-align: center;
-            text-decoration: none;
-            color: #2d3436;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07); /* 柔和阴影 */
-        }
-
-        /* 悬停时的交互：更亮、轻微放大 */
-        .card:hover {
-            background: rgba(255, 255, 255, 0.4);
-            transform: translateY(-8px);
-            border-color: rgba(173, 216, 230, 0.8); /* 淡淡的蓝色边缘 */
-            box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.15);
-        }
-
-        .card h2 {
-            font-size: 3rem;
-            margin: 0;
-            font-weight: 300;
-            color: #ADD8E6; /* 你最爱的淡蓝色 */
-            opacity: 0.8;
-        }
-
-        .card span {
-            display: block;
-            margin-top: 15px;
-            font-size: 0.9rem;
-            letter-spacing: 0.15rem;
-            text-transform: uppercase;
-            font-weight: 500;
-            color: #636e72;
-        }
+        body { font-family: 'Inter', -apple-system, sans-serif; background-color: #fdfdfd; }
+        .sidebar-card { border-radius: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+        .pub-card { transition: transform 0.2s; }
+        .pub-card:hover { transform: translateY(-2px); }
     </style>
 </head>
-<body>
+<body class="text-slate-800">
 
-    <aside class="sidebar">
-        <h1>Sirui Zhu</h1>
-        <p>Ivy Zhu<br>SYSU | Information Management</p>
-        <p>Focusing on AI Automation, RAG, and Architectural Photography.</p>
-    </aside>
+    <nav class="max-w-6xl mx-auto px-8 py-6 flex justify-between items-center">
+        <h1 class="text-2xl font-bold tracking-tight">Sirui Zhu</h1>
+        <div class="space-x-8 text-sm font-medium text-slate-600">
+            <a href="#" class="bg-slate-100 px-3 py-1 rounded-md text-slate-900">About</a>
+            <a href="#" class="hover:text-blue-600">Publications</a>
+            <a href="#" class="hover:text-blue-600">Research</a>
+            <a href="#" class="hover:text-blue-600">CV</a>
+        </div>
+    </nav>
 
-    <main class="main-content">
-        <a href="#" class="card">
-            <h2>1</h2>
-            <span>Photography</span>
-        </a>
-        <a href="#" class="card">
-            <h2>2</h2>
-            <span>AI Projects</span>
-        </a>
-        <a href="#" class="card">
-            <h2>3</h2>
-            <span>Academic</span>
-        </a>
-        <a href="#" class="card">
-            <h2>4</h2>
-            <span>About</span>
-        </a>
+    <main class="max-w-6xl mx-auto px-8 py-4 flex flex-col md:flex-row gap-12">
+        
+        <aside class="md:w-1/3">
+            <div class="sidebar-card bg-white p-8">
+                <img src="avatar.jpg" alt="Avatar" class="w-full aspect-square object-cover rounded-2xl mb-6 shadow-sm">
+                
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold mb-1">Sirui Zhu</h2>
+                    <p class="text-orange-400 font-semibold mb-2">Undergraduate Student</p>
+                    <p class="text-slate-500 text-sm">Sun Yat-sen University</p>
+                </div>
+
+                <div class="flex justify-center gap-5 my-8 text-slate-400 text-xl">
+                    <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-solid fa-graduation-cap"></i></a>
+                </div>
+
+                <div class="mt-8">
+                    <h3 class="font-bold mb-4 text-sm uppercase tracking-wider text-slate-400">Research Interests</h3>
+                    <ul class="space-y-2 text-slate-600">
+                        <li class="bg-slate-50 px-3 py-2 rounded-lg text-sm border border-slate-100">AI Automation & RAG</li>
+                        <li class="bg-slate-50 px-3 py-2 rounded-lg text-sm border border-slate-100">Information Management</li>
+                        <li class="bg-slate-50 px-3 py-2 rounded-lg text-sm border border-slate-100">Computer Vision</li>
+                    </ul>
+                </div>
+            </div>
+        </aside>
+
+        <section class="md:w-2/3">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">About</h2>
+                <div class="prose text-slate-600 leading-relaxed space-y-4">
+                    <p>我是中山大学信息管理学院的本科生，师从 XXX 老师。目前我的研究集中在人工智能应用场景分析及自动化流程构建。</p>
+                    <p>我热衷于探索 RAG（检索增强生成）与 AI Agent 的结合，并曾参与过三一重工等企业的 AI 自动化项目。</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex justify-between items-end mb-6">
+                    <h2 class="text-3xl font-bold">Selected Publications</h2>
+                    <a href="#" class="text-orange-400 text-sm font-bold flex items-center">View All <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                </div>
+
+                <div class="pub-card bg-white p-6 rounded-2xl border border-slate-100 mb-4 shadow-sm">
+                    <h3 class="text-lg font-bold mb-2">Investigation of AI Application Scenarios in Public Libraries</h3>
+                    <p class="text-sm text-slate-400 mb-2 font-medium">Sirui Zhu, Linlin Song*</p>
+                    <p class="text-sm text-slate-500 italic mb-3">Thesis Project, 2026</p>
+                    <p class="text-sm text-slate-600 leading-relaxed">对中国32个省级公共图书馆的 AI 应用场景进行了深度分析与建模...</p>
+                </div>
+            </div>
+        </section>
+
     </main>
 
 </body>
