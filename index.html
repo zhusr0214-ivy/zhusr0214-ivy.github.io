@@ -80,6 +80,26 @@
             color: #ffffff;
         }
         
+        /* Language switch button */
+        .lang-switch {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 6px 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-switch:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+        }
+        
         /* Apple-style glass morphism - reduced blur for better star visibility */
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
@@ -256,6 +276,7 @@
                 <a href="projects.html" class="nav-link">Projects</a>
                 <a href="cv.html" class="nav-link">CV</a>
                 <a href="thoughts.html" class="nav-link">Thoughts</a>
+                <button class="lang-switch" onclick="toggleLanguage()">EN/中文</button>
             </div>
         </nav>
 
@@ -693,6 +714,106 @@
         
         // Add event listener
         document.getElementById('contact-form').addEventListener('submit', handleSubmit);
+        
+        // Language switching
+        let currentLang = localStorage.getItem('lang') || 'en';
+        
+        const translations = {
+            en: {
+                'nav-home': 'Home',
+                'nav-experience': 'Experience',
+                'nav-projects': 'Projects',
+                'nav-cv': 'CV',
+                'nav-thoughts': 'Thoughts',
+                'hero-title': "Hi, I'm Ivy",
+                'hero-current-title': 'Currently',
+                'hero-current-1': 'AI Product Specialist building intelligent workflows and RAG systems',
+                'hero-current-2': 'Incoming Master\'s in Computer Science at <a href="https://www.nus.edu.sg" target="_blank" class="underline">National University of Singapore</a> (Aug 2026)',
+                'hero-background-title': 'Background',
+                'hero-background-1': 'Graduating from <a href="https://www.sysu.edu.cn" target="_blank" class="underline">Sun Yat-sen University</a> with a degree in Library Science',
+                'hero-background-2': 'Passionate about bridging the gap between technology and users through AI and automation',
+                'social-title': 'Let\'s Connect',
+                'contact-title': 'Get in Touch',
+                'contact-desc': 'Have a question or want to collaborate? Leave a message below.',
+                'contact-name': 'Name',
+                'contact-name-placeholder': 'Your name',
+                'contact-email': 'Email',
+                'contact-email-placeholder': 'your@email.com',
+                'contact-message': 'Message',
+                'contact-message-placeholder': 'Your message...',
+                'contact-submit': 'Send Message',
+                'contact-success': 'Message sent successfully!'
+            },
+            zh: {
+                'nav-home': '首页',
+                'nav-experience': '经历',
+                'nav-projects': '项目',
+                'nav-cv': '简历',
+                'nav-thoughts': '思考',
+                'hero-title': '你好，我是Ivy',
+                'hero-current-title': '目前',
+                'hero-current-1': 'AI产品专家，专注于智能工作流和RAG系统开发',
+                'hero-current-2': '即将入读<a href="https://www.nus.edu.sg" target="_blank" class="underline">新加坡国立大学</a>计算机科学硕士（2026年8月）',
+                'hero-background-title': '背景',
+                'hero-background-1': '毕业于<a href="https://www.sysu.edu.cn" target="_blank" class="underline">中山大学</a>图书馆学专业',
+                'hero-background-2': '热衷于通过AI和自动化技术弥合技术与用户之间的鸿沟',
+                'social-title': '联系我',
+                'contact-title': '留言联系',
+                'contact-desc': '有问题或想合作？在下面留言吧。',
+                'contact-name': '姓名',
+                'contact-name-placeholder': '你的姓名',
+                'contact-email': '邮箱',
+                'contact-email-placeholder': 'your@email.com',
+                'contact-message': '留言内容',
+                'contact-message-placeholder': '请输入留言...',
+                'contact-submit': '发送留言',
+                'contact-success': '留言发送成功！'
+            }
+        };
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            localStorage.setItem('lang', currentLang);
+            applyLanguage();
+        }
+        
+        function applyLanguage() {
+            const t = translations[currentLang];
+            
+            // Update navigation
+            document.querySelector('a[href="index.html"]').textContent = t['nav-home'];
+            document.querySelector('a[href="experience.html"]').textContent = t['nav-experience'];
+            document.querySelector('a[href="projects.html"]').textContent = t['nav-projects'];
+            document.querySelector('a[href="cv.html"]').textContent = t['nav-cv'];
+            document.querySelector('a[href="thoughts.html"]').textContent = t['nav-thoughts'];
+            
+            // Update hero section
+            document.querySelector('h1.text-7xl').textContent = t['hero-title'];
+            document.querySelectorAll('h2.text-3xl')[0].textContent = t['hero-current-title'];
+            document.querySelector('.border-l-4 p:first-child').textContent = t['hero-current-1'];
+            document.querySelector('.border-l-4 p:last-child').innerHTML = t['hero-current-2'];
+            document.querySelectorAll('h2.text-3xl')[1].textContent = t['hero-background-title'];
+            document.querySelectorAll('.space-y-8 p')[2].innerHTML = t['hero-background-1'];
+            document.querySelectorAll('.space-y-8 p')[3].textContent = t['hero-background-2'];
+            document.querySelectorAll('h2.text-2xl')[0].textContent = t['social-title'];
+            
+            // Update contact section
+            document.querySelectorAll('h2.text-2xl')[1].textContent = t['contact-title'];
+            document.querySelector('.glass-card p.text-zinc-400').textContent = t['contact-desc'];
+            document.querySelectorAll('label')[0].textContent = t['contact-name'];
+            document.querySelector('#name').placeholder = t['contact-name-placeholder'];
+            document.querySelectorAll('label')[1].textContent = t['contact-email'];
+            document.querySelector('#email').placeholder = t['contact-email-placeholder'];
+            document.querySelectorAll('label')[2].textContent = t['contact-message'];
+            document.querySelector('#message').placeholder = t['contact-message-placeholder'];
+            document.querySelector('#submit-btn').textContent = t['contact-submit'];
+            document.querySelector('#success-message p').textContent = t['contact-success'];
+        }
+        
+        // Apply language on page load
+        if (currentLang !== 'en') {
+            applyLanguage();
+        }
     </script>
 
 </body>

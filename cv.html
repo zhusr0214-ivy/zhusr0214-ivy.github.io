@@ -77,6 +77,26 @@
             color: #ffffff;
         }
         
+        /* Language switch button */
+        .lang-switch {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 6px 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .lang-switch:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: #ffffff;
+        }
+        
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px) saturate(150%);
@@ -219,6 +239,7 @@
                 <a href="projects.html" class="nav-link">Projects</a>
                 <a href="cv.html" class="nav-link active">CV</a>
                 <a href="thoughts.html" class="nav-link">Thoughts</a>
+                <button class="lang-switch" onclick="toggleLanguage()">EN/中文</button>
             </div>
         </nav>
         
