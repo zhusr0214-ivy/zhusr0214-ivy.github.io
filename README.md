@@ -28,10 +28,10 @@ I design **AI systems** that turn complex problems into elegant automations. Pas
 
 | Status | Details |
 |--------|---------|
-| 🎓 Education | Incoming Master's in Computer Science @ **NUS** (Aug 2026) |
+| 🎓 Education | SYSU LibS 26' NUS CS 28'|
 | 💼 Role | AI Product Specialist |
 | 🎯 Focus | AI Agents, RAG Systems, Workflow Automation |
-| 📍 Location | Singapore |
+| 📍 Location | Guangzhou |
 
 ---
 
