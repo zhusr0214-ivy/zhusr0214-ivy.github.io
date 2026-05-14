@@ -170,12 +170,13 @@
             }
             
             .nav-link {
-                padding: 18px 0 !important;
+                padding: 18px 20px !important;
                 font-size: 1.1rem !important;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.08);
                 width: 100%;
                 display: block;
                 text-align: left;
+                margin-left: 0 !important;
             }
             
             .nav-link:last-child {
@@ -282,11 +283,11 @@
                 I
             </a>
             <div class="nav-links space-x-10 text-sm">
-                <a href="index.html" class="nav-link" onclick="closeMenu()">Home</a>
-                <a href="experience.html" class="nav-link active" onclick="closeMenu()">Experience</a>
-                <a href="projects.html" class="nav-link" onclick="closeMenu()">Projects</a>
-                <a href="cv.html" class="nav-link" onclick="closeMenu()">CV</a>
-                <a href="thoughts.html" class="nav-link" onclick="closeMenu()">Thoughts</a>
+                <a href="index.html" class="nav-link" onclick="handleNavClick(event, 'index.html')">Home</a>
+                <a href="experience.html" class="nav-link active" onclick="handleNavClick(event, 'experience.html')">Experience</a>
+                <a href="projects.html" class="nav-link" onclick="handleNavClick(event, 'projects.html')">Projects</a>
+                <a href="cv.html" class="nav-link" onclick="handleNavClick(event, 'cv.html')">CV</a>
+                <a href="thoughts.html" class="nav-link" onclick="handleNavClick(event, 'thoughts.html')">Thoughts</a>
             </div>
             <button class="mobile-menu-btn" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
