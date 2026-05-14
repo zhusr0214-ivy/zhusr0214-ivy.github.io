@@ -1,17 +1,17 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge&logo=githubpages" alt="Status">
-  <img src="https://img.shields.io/badge/Built%20with-HTML%20%7C%20CSS%20%7C%20JS-blue?style=for-the-badge&logo=html5" alt="Tech Stack">
-  <img src="https://img.shields.io/badge/Hosted%20on-GitHub%20Pages-222?style=for-the-badge&logo=github" alt="Hosting">
+  <img src="https://img.shields.io/badge/Status-Open%20to%20Opportunities-brightgreen?style=for-the-badge" alt="Status">
+  <img src="https://img.shields.io/badge/Location-Guangzhou%20%7C%20Singapore-blue?style=for-the-badge" alt="Location">
+  <img src="https://img.shields.io/badge/NUS%20CS-2026--2028-orange?style=for-the-badge" alt="Education">
 </p>
 
-<h1 align="center">✨ Sirui Zhu (Ivy) - Personal Portfolio</h1>
+<h1 align="center">👋 Hi, I'm Sirui Zhu (Ivy)</h1>
 
 <p align="center">
-  <em>AI Product Specialist | Incoming NUS Master's Student</em>
+  <em>AI Product & Workflow Builder</em>
 </p>
 
 <p align="center">
-  🌐 <a href="https://zhusr0214-ivy.github.io">Visit Live Site</a> • 📧 <a href="mailto:zhusr1207@gmail.com">Contact Me</a> • 💼 <a href="https://zhusr0214-ivy.github.io/cv.html">View CV</a>
+  🌐 <a href="https://zhusr0214-ivy.github.io">Portfolio</a> • 📧 <a href="mailto:zhusr1207@gmail.com">Email</a> • 💼 <a href="https://zhusr0214-ivy.github.io/cv.html">Resume</a>
 </p>
 
 ---
@@ -20,318 +20,157 @@
 
 <div align="center">
 
-I design **AI systems** that turn complex problems into elegant automations. Passionate about the intersection of **technology** and **human-centered design**.
+I build **intelligent systems** that transform complex workflows into elegant automations. 
+
+Currently focused on **AI agents**, **RAG pipelines**, and **workflow automation** — bridging the gap between cutting-edge AI technology and real-world applications.
 
 </div>
 
-### 🚀 Current Status
+### 📍 Current Status
 
-| Status | Details |
-|--------|---------|
-| 🎓 Education | SYSU LibS 26' NUS CS 28'|
-| 💼 Role | AI Product Specialist |
-| 🎯 Focus | AI Agents, RAG Systems, Workflow Automation |
-| 📍 Location | Guangzhou |
-
----
-
-## ✨ Features Showcase
-
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <h3>🌍 Dynamic Earth Background</h3>
-      <p>Animated canvas with twinkling stars, shooting stars, and rotating city lights</p>
-      <img src="https://img.shields.io/badge/Canvas%20API-Real--time%20Rendering-blueviolet?style=flat-square" alt="Canvas">
-    </td>
-    <td align="center" width="33%">
-      <h3>🎨 Apple-style Glass UI</h3>
-      <p>Modern frosted glass morphism with subtle blur effects and smooth transitions</p>
-      <img src="https://img.shields.io/badge/Backdrop%20Filter-Blur%2020px-8B5CF6?style=flat-square" alt="Glass">
-    </td>
-    <td align="center" width="33%">
-      <h3>📱 Fully Responsive</h3>
-      <p>Optimized for all devices from mobile to desktop</p>
-      <img src="https://img.shields.io/badge/Responsive-Mobile%20First-brightgreen?style=flat-square" alt="Responsive">
-    </td>
-  </tr>
-  <tr>
-    <td align="center">
-      <h3>💌 Contact Form</h3>
-      <p>Interactive form with Formspree integration, no page redirect</p>
-      <img src="https://img.shields.io/badge/Formspree-AJAX%20Submit-orange?style=flat-square" alt="Form">
-    </td>
-    <td align="center">
-      <h3>🌠 Shooting Stars</h3>
-      <p>Random meteor animations with gradient trails</p>
-      <img src="https://img.shields.io/badge/Animation-600%20Stars-yellow?style=flat-square" alt="Stars">
-    </td>
-    <td align="center">
-      <h3>⚡ Smooth Transitions</h3>
-      <p>CSS animations with cubic-bezier easing</p>
-      <img src="https://img.shields.io/badge/CSS3-Animations-blue?style=flat-square" alt="CSS">
-    </td>
-  </tr>
-</table>
+| What | Details |
+|------|---------|
+| 🎓 **Education** | Sun Yat-sen University (Library Science '26) → NUS (Computer Science '28) |
+| 💼 **Role** | AI Product & Workflow Builder |
+| 🎯 **Focus** | AI Agents • RAG Systems • Workflow Automation • Product Design |
+| 🌏 **Location** | Guangzhou / Singapore |
+| ✉️ **Contact** | [zhusr1207@gmail.com](mailto:zhusr1207@gmail.com) |
 
 ---
 
-## 🗂️ Site Architecture
+## 💡 What I Do
 
-```
-📦 Personal Website
-├── 🏠 Home (index.html)
-│   ├── Hero Section
-│   ├── Social Links
-│   └── Contact Form
-│
-├── 💼 Experience (experience.html)
-│   ├── Guyu Biotechnology
-│   └── Sany Group
-│
-├── 🚀 Projects (projects.html)
-│   ├── AI Library Research
-│   └── Future Projects
-│
-├── 📄 CV (cv.html)
-│   └── Full Resume
-│
-└── 💭 Thoughts (thoughts.html)
-    └── Personal Insights
-```
+### 🤖 AI Product Development
+Building end-to-end AI solutions from concept to deployment:
+- **AI Agents** - Designing intelligent agents with knowledge bases and retrieval workflows
+- **RAG Systems** - Implementing retrieval-augmented generation for structured data extraction
+- **Workflow Automation** - Creating automated pipelines using Make, Coze, and custom integrations
 
----
-
-## 🛠️ Tech Stack
+### 🛠️ Technical Skills
 
 <div align="center">
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Canvas](https://img.shields.io/badge/Canvas_API-2D2D2D?style=for-the-badge&logo=firefox&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub_Pages-222?style=for-the-badge&logo=github&logoColor=white)
+**AI/ML**: `RAG` `LLM APIs` `Prompt Engineering` `Knowledge Base Design` `AI Agent Development`
+
+**Tools**: `Coze` `Make` `JSON` `REST APIs` `Data Pipeline`
+
+**Development**: `HTML/CSS/JS` `Frontend Design` `Canvas API` `Workflow Architecture`
+
+**Research**: `User Research` `Product Design` `Information Retrieval` `Knowledge Systems`
 
 </div>
 
 ---
 
-## 🎨 Design System
+## 🚀 Experience
 
-### Color Palette
+### Guyu Biotechnology — AI Product Intern
+**2026.03 - 2026.06** | E-commerce AI Solutions
 
-<div align="center">
+Led development of AI annotation workflow for e-commerce user reviews:
 
-| Primary | Secondary | Accent | Background |
-|---------|-----------|--------|------------|
-| ![#A78BFA](https://via.placeholder.com/50/A78BFA?text=+) `#A78BFA` | ![#3B82F6](https://via.placeholder.com/50/3B82F6?text=+) `#3B82F6` | ![#10B981](https://via.placeholder.com/50/10B981?text=+) `#10B981` | ![#0A0A0F](https://via.placeholder.com/50/0A0A0F?text=+) `#0A0A0F` |
+✅ Built internal AI Agent with structured JSON datasets and knowledge base  
+✅ Designed retrieval, query, and response generation workflows using Coze  
+✅ Optimized enterprise knowledge base for structured information extraction  
+✅ Evaluated vendor AI solutions for SCRM projects  
 
-</div>
-
-### Typography
-
-- **Font Family**: `-apple-system, BlinkMacSystemFont, SF Pro Display, Segoe UI`
-- **Weights**: 300 (Light), 400 (Regular), 500 (Medium), 600 (Semi-bold), 700 (Bold)
+**Tech**: Coze • RAG • JSON • Prompt Engineering • Knowledge Base
 
 ---
 
-## 📱 Page Breakdown
+### Sany Group — AI Product Intern
+**2025.03 - 2025.06** | Enterprise Automation
 
-### 🏠 Home Page
-**URL**: `index.html`
+Built AI daily report generation system from scratch:
 
-- ✅ Hero section with personal introduction
-- ✅ Current status and background
-- ✅ Social media links (Email, GitHub, LinkedIn)
-- ✅ Interactive contact form with Formspree
+✅ Conducted user research and designed workflow architecture  
+✅ Integrated LLM APIs and implemented RAG data pipeline  
+✅ Optimized prompts through iterative testing for better output quality  
+✅ Designed and developed website frontend  
 
-### 💼 Experience Page
-**URL**: `experience.html`
-
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Role</th>
-    <th>Period</th>
-    <th>Focus</th>
-  </tr>
-  <tr>
-    <td>Guyu Biotechnology</td>
-    <td>AI Product Intern</td>
-    <td>2026.03 - 2026.06</td>
-    <td>AI Agent, RAG</td>
-  </tr>
-  <tr>
-    <td>Sany Group</td>
-    <td>AI Product Intern</td>
-    <td>2025.03 - 2025.06</td>
-    <td>Automation, Make</td>
-  </tr>
-</table>
-
-### 🚀 Projects Page
-**URL**: `projects.html`
-
-Currently featuring:
-- 📚 AI-Powered Library Services Research (2025.11 - 2026.05)
-- 🔜 More projects coming soon...
-
-### 📄 CV Page
-**URL**: `cv.html`
-
-Complete resume including:
-- Education history
-- Work experience
-- Skills & technologies
-- Research projects
-
-### 💭 Thoughts Page
-**URL**: `thoughts.html`
-
-Personal reflections and industry insights.
+**Tech**: Make • LLM APIs • RAG • Frontend • User Research
 
 ---
 
-## 🚀 Quick Start
+## 📚 Research
 
-### Clone & Run Locally
+### AI-Powered Library Services Research
+**2025.11 - 2026.05** | Independent Research
 
-```bash
-# 1. Clone repository
-git clone https://github.com/zhusr0214/zhusr0214-ivy.github.io.git
+Investigated AI applications in public library services:
 
-# 2. Navigate to project
-cd zhusr0214-ivy.github.io
+🔍 Analyzed AI integration in user interaction and information retrieval  
+🔍 Identified challenges in knowledge organization and retrieval accuracy  
+🔍 Proposed RAG-enhanced workflows for service optimization  
+🔍 Explored LLM-based knowledge services and recommendation systems  
 
-# 3. Start local server
-python3 -m http.server 8080
-
-# 4. Open browser
-# Visit: http://localhost:8080
-```
-
-### Deploy to GitHub Pages
-
-```bash
-# Add changes
-git add .
-
-# Commit
-git commit -m "Update portfolio"
-
-# Push (auto-deploys)
-git push origin main
-```
+**Focus**: RAG • Knowledge Systems • AI Integration • User Experience
 
 ---
 
-## 📧 Contact Form Setup
+## 🎓 Education
 
-The site uses **Formspree** for email submissions:
+### National University of Singapore
+**Master of Computing (Computer Science)** | 2026 - 2028 (Incoming)
 
-1. **Sign up** at [formspree.io](https://formspree.io)
-2. **Create** a new form
-3. **Replace** `mvzlnbvy` with your form ID in all HTML files
-4. **Receive** submissions in your email
-
-**Current Endpoint**: `https://formspree.io/f/mvzlnbvy`
+### Sun Yat-sen University
+**Bachelor of Library Science** | 2022 - 2026
 
 ---
 
-## 🎯 Key Features
+## 💼 Projects
 
-<details>
-<summary><b>🌍 Dynamic Earth Animation</b></summary>
+### Currently Featured on Portfolio:
 
-- 600 twinkling stars with varying sizes
-- Shooting stars with random generation
-- Rotating city lights clusters
-- Multi-layer atmospheric glow
-- Smooth 60fps canvas rendering
+📚 **[AI Library Services Research](https://zhusr0214-ivy.github.io/projects.html)**  
+Research on AI transformation of public library services
 
-</details>
+🔜 **More projects coming soon...**
 
-<details>
-<summary><b>💎 Glass Morphism UI</b></summary>
-
-- `backdrop-filter: blur(20px)` frosted glass effect
-- Semi-transparent backgrounds (5% opacity)
-- Subtle borders (10% white)
-- Hover state transitions
-- Apple-inspired design language
-
-</details>
-
-<details>
-<summary><b>📬 AJAX Contact Form</b></summary>
-
-- No page redirect on submission
-- Real-time validation
-- Loading states
-- Success/error feedback
-- Formspree integration
-
-</details>
-
-<details>
-<summary><b>🎭 Smooth Animations</b></summary>
-
-- Fade-in on page load
-- Staggered card animations
-- Hover micro-interactions
-- Smooth scroll behavior
-- CSS cubic-bezier easing
-
-</details>
+> 💡 Visit my [portfolio site](https://zhusr0214-ivy.github.io) to see my latest work and case studies.
 
 ---
 
-## 📊 Performance
+## 🎯 What I'm Looking For
 
-| Metric | Score |
-|--------|-------|
-| Page Load | ~1.2s |
-| Animations | 60 FPS |
-| Responsive | ✅ All devices |
-| Browser Support | Chrome 80+, Firefox 75+, Safari 13+ |
+- 🚀 Opportunities in **AI product development** and **workflow automation**
+- 🤝 Collaboration on **AI agent** and **RAG system** projects
+- 💡 Problems that need **creative automation solutions**
+- 🌍 Connections in the **AI/tech community**
 
 ---
 
-## 🔮 Future Enhancements
+## 📬 Let's Connect
 
-- [ ] Dark/Light mode toggle
-- [ ] Project screenshots gallery
-- [ ] Blog section
-- [ ] Multi-language support
-- [ ] Analytics integration
-- [ ] SEO optimization
-
----
-
-## 🤝 Connect With Me
+I'm always open to interesting conversations and collaborations!
 
 <p align="center">
   <a href="mailto:zhusr1207@gmail.com">
-    <img src="https://img.shields.io/badge/Email-zhusr1207@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-  </a>
-  <a href="https://github.com/zhusr0214">
-    <img src="https://img.shields.io/badge/GitHub-@zhusr0214-222?style=for-the-badge&logo=github" alt="GitHub">
+    <img src="https://img.shields.io/badge/📧-Email%20Me-D14836?style=for-the-badge" alt="Email">
   </a>
   <a href="https://zhusr0214-ivy.github.io">
-    <img src="https://img.shields.io/badge/Website-Portfolio-blue?style=for-the-badge&logo=google-chrome" alt="Website">
+    <img src="https://img.shields.io/badge/🌐-Portfolio-blue?style=for-the-badge" alt="Portfolio">
+  </a>
+  <a href="https://zhusr0214-ivy.github.io/cv.html">
+    <img src="https://img.shields.io/badge/📄-Full%20CV-222?style=for-the-badge" alt="CV">
   </a>
 </p>
 
 ---
 
-## 📄 License
+## 📊 Quick Stats
 
-This project is open source under the [MIT License](LICENSE).
+<div align="center">
+
+**Core Expertise**: AI Product • Workflow Automation • RAG Systems  
+**Industries**: E-commerce • Manufacturing • Library Science  
+**Approach**: User-centered design • Iterative optimization • End-to-end ownership
+
+</div>
 
 ---
 
 <p align="center">
-  <em>Made with ❤️ by Sirui Zhu (Ivy)</em><br>
+  <em>Thanks for visiting! Feel free to reach out — I'd love to connect.</em><br>
   <sub>Last updated: February 2026</sub>
 </p>
