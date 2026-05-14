@@ -316,11 +316,11 @@
                 I
             </div>
             <div class="nav-links space-x-10 text-sm">
-                <a href="index.html" class="nav-link active">Home</a>
-                <a href="experience.html" class="nav-link">Experience</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="cv.html" class="nav-link">CV</a>
-                <a href="thoughts.html" class="nav-link">Thoughts</a>
+                <a href="index.html" class="nav-link active" onclick="if(window.innerWidth<=768){event.preventDefault();closeMenu();setTimeout(()=>{window.location.href='index.html'},300)}">Home</a>
+                <a href="experience.html" class="nav-link" onclick="if(window.innerWidth<=768){event.preventDefault();closeMenu();setTimeout(()=>{window.location.href='experience.html'},300)}">Experience</a>
+                <a href="projects.html" class="nav-link" onclick="if(window.innerWidth<=768){event.preventDefault();closeMenu();setTimeout(()=>{window.location.href='projects.html'},300)}">Projects</a>
+                <a href="cv.html" class="nav-link" onclick="if(window.innerWidth<=768){event.preventDefault();closeMenu();setTimeout(()=>{window.location.href='cv.html'},300)}">CV</a>
+                <a href="thoughts.html" class="nav-link" onclick="if(window.innerWidth<=768){event.preventDefault();closeMenu();setTimeout(()=>{window.location.href='thoughts.html'},300)}">Thoughts</a>
             </div>
             <button class="mobile-menu-btn" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
@@ -798,27 +798,28 @@
             icon.classList.add('fa-bars');
         }
         
-        // Handle mobile navigation
-        document.addEventListener('DOMContentLoaded', function() {
+        // Handle mobile navigation - bind events immediately
+        function setupMobileNav() {
             const navLinks = document.querySelectorAll('.nav-link');
             
             navLinks.forEach(function(link) {
                 link.addEventListener('click', function(e) {
-                    // Only handle on mobile
                     if (window.innerWidth <= 768) {
                         e.preventDefault();
                         const href = this.getAttribute('href');
                         
                         closeMenu();
                         
-                        // Navigate after animation
                         setTimeout(function() {
                             window.location.href = href;
                         }, 300);
                     }
                 });
             });
-        });
+        }
+        
+        // Setup navigation
+        setupMobileNav();
         
         // Close menu on window resize
         window.addEventListener('resize', () => {
