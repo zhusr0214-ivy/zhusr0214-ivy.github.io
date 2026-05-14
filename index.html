@@ -316,11 +316,11 @@
                 I
             </div>
             <div class="nav-links space-x-10 text-sm">
-                <a href="index.html" class="nav-link active" onclick="if(window.innerWidth<=768){event.preventDefault();closeMenu();setTimeout(()=>{window.location.href='index.html'},300)}">Home</a>
-                <a href="experience.html" class="nav-link" onclick="if(window.innerWidth<=768){event.preventDefault();closeMenu();setTimeout(()=>{window.location.href='experience.html'},300)}">Experience</a>
-                <a href="projects.html" class="nav-link" onclick="if(window.innerWidth<=768){event.preventDefault();closeMenu();setTimeout(()=>{window.location.href='projects.html'},300)}">Projects</a>
-                <a href="cv.html" class="nav-link" onclick="if(window.innerWidth<=768){event.preventDefault();closeMenu();setTimeout(()=>{window.location.href='cv.html'},300)}">CV</a>
-                <a href="thoughts.html" class="nav-link" onclick="if(window.innerWidth<=768){event.preventDefault();closeMenu();setTimeout(()=>{window.location.href='thoughts.html'},300)}">Thoughts</a>
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="cv.html" class="nav-link">CV</a>
+                <a href="thoughts.html" class="nav-link">Thoughts</a>
             </div>
             <button class="mobile-menu-btn" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
@@ -790,36 +790,29 @@
             const overlay = document.querySelector('.nav-overlay');
             const menuBtn = document.querySelector('.mobile-menu-btn');
             
-            navLinks.classList.remove('active');
-            overlay.classList.remove('active');
+            if (navLinks) navLinks.classList.remove('active');
+            if (overlay) overlay.classList.remove('active');
             
-            const icon = menuBtn.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+            if (menuBtn) {
+                const icon = menuBtn.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            }
         }
         
-        // Handle mobile navigation - bind events immediately
-        function setupMobileNav() {
-            const navLinks = document.querySelectorAll('.nav-link');
-            
-            navLinks.forEach(function(link) {
+        // Add click handlers to nav links for mobile
+        window.addEventListener('load', function() {
+            const links = document.querySelectorAll('.nav-link');
+            links.forEach(function(link) {
                 link.addEventListener('click', function(e) {
                     if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        const href = this.getAttribute('href');
-                        
                         closeMenu();
-                        
-                        setTimeout(function() {
-                            window.location.href = href;
-                        }, 300);
                     }
                 });
             });
-        }
-        
-        // Setup navigation
-        setupMobileNav();
+        });
         
         // Close menu on window resize
         window.addEventListener('resize', () => {
