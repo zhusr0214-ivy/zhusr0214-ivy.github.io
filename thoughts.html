@@ -119,73 +119,8 @@
             align-items: center;
         }
         
-        /* Mobile Responsive */
-        .mobile-menu-btn {
-            display: none;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            padding: 8px 12px;
-            color: white;
-            font-size: 1.2rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .mobile-menu-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-        
         @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: -100%;
-                width: 60%;
-                max-width: 260px;
-                height: 100vh;
-                background: rgba(10, 10, 15, 0.98);
-                backdrop-filter: blur(20px);
-                -webkit-backdrop-filter: blur(20px);
-                flex-direction: column !important;
-                padding: 80px 30px 30px !important;
-                gap: 0 !important;
-                transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                z-index: 100;
-                border-left: 1px solid rgba(255, 255, 255, 0.1);
-                box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
-            }
-            
-            .nav-links.active {
-                right: 0;
-            }
-            
-            .nav-link {
-                padding: 18px 20px !important;
-                font-size: 1.1rem !important;
-                color: #ffffff !important;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-                width: 100%;
-                display: block;
-                text-align: left;
-                margin-left: 0 !important;
-                font-weight: 500;
-            }
-            
-            .nav-link:hover, .nav-link.active {
-                color: #a78bfa !important;
-            }
-            
-            .nav-link:last-child {
-                border-bottom: none;
-            }
-            
+            /* Content adjustments */
             .container {
                 padding-left: 20px !important;
                 padding-right: 20px !important;
@@ -201,10 +136,6 @@
             
             h2.text-3xl {
                 font-size: 1.8rem !important;
-            }
-            
-            h2.text-4xl {
-                font-size: 2rem !important;
             }
             
             .text-2xl {
@@ -224,10 +155,6 @@
                 margin-bottom: 16px !important;
             }
             
-            .hero-section {
-                padding: 60px 0 40px !important;
-            }
-            
             .social-icon {
                 width: 44px;
                 height: 44px;
@@ -237,19 +164,21 @@
                 font-size: 16px !important;
             }
             
-            .nav-overlay {
-                display: none;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.5);
-                z-index: 99;
+            /* Navigation - wrap on mobile */
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 8px !important;
             }
             
-            .nav-overlay.active {
-                display: block;
+            .nav-link {
+                padding: 6px 12px !important;
+                font-size: 0.85rem !important;
+            }
+            
+            nav {
+                flex-wrap: wrap;
+                gap: 12px;
             }
         }
         
@@ -292,9 +221,6 @@
                 <a href="cv.html" class="nav-link">CV</a>
                 <a href="thoughts.html" class="nav-link active">Thoughts</a>
             </div>
-            <button class="mobile-menu-btn" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
         </nav>
         
         <!-- Mobile Menu Overlay -->
@@ -735,44 +661,6 @@
         
         // Add event listener
         document.getElementById('contact-form').addEventListener('submit', handleSubmit);
-    
-        // Mobile menu functions
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            const overlay = document.querySelector('.nav-overlay');
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            
-            navLinks.classList.toggle('active');
-            overlay.classList.toggle('active');
-            
-            const icon = menuBtn.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        }
-        
-        function closeMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            const overlay = document.querySelector('.nav-overlay');
-            const menuBtn = document.querySelector('.mobile-menu-btn');
-            
-            navLinks.classList.remove('active');
-            overlay.classList.remove('active');
-            
-            const icon = menuBtn.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
-        }
-        
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                closeMenu();
-            }
-        });
 </script>
 
 </body>
