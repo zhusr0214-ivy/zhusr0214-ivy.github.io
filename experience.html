@@ -115,6 +115,146 @@
         .fade-in:nth-child(3) { animation-delay: 0.15s; }
         .fade-in:nth-child(4) { animation-delay: 0.2s; }
         .fade-in:nth-child(5) { animation-delay: 0.25s; }
+
+        /* Mobile Responsive */
+        .mobile-menu-btn {
+            display: none;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            padding: 8px 12px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                max-width: 300px;
+                height: 100vh;
+                background: rgba(10, 10, 15, 0.95);
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                flex-direction: column;
+                padding: 80px 30px 30px;
+                gap: 0;
+                transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                z-index: 100;
+                border-left: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-link {
+                padding: 16px 0;
+                font-size: 1.1rem;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                width: 100%;
+            }
+            
+            .container {
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+            }
+            
+            h1.text-5xl {
+                font-size: 2.5rem !important;
+            }
+            
+            h1.text-6xl {
+                font-size: 2.8rem !important;
+            }
+            
+            h2.text-3xl {
+                font-size: 1.8rem !important;
+            }
+            
+            h2.text-4xl {
+                font-size: 2rem !important;
+            }
+            
+            .text-2xl {
+                font-size: 1.5rem !important;
+            }
+            
+            .text-lg {
+                font-size: 1rem !important;
+            }
+            
+            .text-xl {
+                font-size: 1.1rem !important;
+            }
+            
+            .glass-card {
+                padding: 20px !important;
+                margin-bottom: 16px !important;
+            }
+            
+            .hero-section {
+                padding: 60px 0 40px !important;
+            }
+            
+            .social-icon {
+                width: 44px;
+                height: 44px;
+            }
+            
+            .form-input, .form-textarea {
+                font-size: 16px !important;
+            }
+            
+            .nav-overlay {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                z-index: 99;
+            }
+            
+            .nav-overlay.active {
+                display: block;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1.text-5xl {
+                font-size: 2rem !important;
+            }
+            
+            h1.text-6xl {
+                font-size: 2.2rem !important;
+            }
+            
+            .container {
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+            }
+            
+            .glass-card {
+                padding: 16px !important;
+                border-radius: 16px !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -128,14 +268,14 @@
             <a href="index.html" class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
                 I
             </a>
-            <div class="space-x-10 text-sm">
-                <a href="index.html" class="nav-link">Home</a>
-                <a href="experience.html" class="nav-link active">Experience</a>
-                <a href="projects.html" class="nav-link">Projects</a>
-                <a href="cv.html" class="nav-link">CV</a>
-                <a href="thoughts.html" class="nav-link">Thoughts</a>
-            </div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="nav-links space-x-10 text-sm">
         </nav>
+        
+        <!-- Mobile Menu Overlay -->
+        <div class="nav-overlay" onclick="closeMenu()"></div>
 
         <!-- Page Header -->
         <section class="mb-16 fade-in">
@@ -565,7 +705,45 @@
         
         // Add event listener
         document.getElementById('contact-form').addEventListener('submit', handleSubmit);
-    </script>
+    
+        // Mobile menu functions
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const overlay = document.querySelector('.nav-overlay');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            navLinks.classList.toggle('active');
+            overlay.classList.toggle('active');
+            
+            const icon = menuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        }
+        
+        function closeMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const overlay = document.querySelector('.nav-overlay');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            
+            navLinks.classList.remove('active');
+            overlay.classList.remove('active');
+            
+            const icon = menuBtn.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+        
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+</script>
 
 </body>
 </html>
