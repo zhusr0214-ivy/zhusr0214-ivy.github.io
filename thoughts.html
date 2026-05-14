@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sirui Zhu (Ivy) | Home</title>
+    <title>Thoughts | Sirui Zhu (Ivy)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -14,12 +14,10 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
         
         #earth-canvas {
@@ -49,7 +47,7 @@
         a {
             color: #a78bfa;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.2s;
         }
         
         a:hover {
@@ -57,9 +55,8 @@
         }
         
         .nav-link {
-            color: rgba(255, 255, 255, 0.6);
-            transition: color 0.3s ease;
-            font-weight: 500;
+            color: #a1a1aa;
+            transition: color 0.2s;
             font-size: 0.95rem;
         }
         
@@ -67,13 +64,14 @@
             color: #ffffff;
         }
         
-        /* Apple-style glass morphism - reduced blur for better star visibility */
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px) saturate(150%);
             -webkit-backdrop-filter: blur(20px) saturate(150%);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
@@ -83,31 +81,10 @@
             transform: translateY(-2px);
         }
         
-        .social-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: #ffffff;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .social-icon:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px) scale(1.05);
-        }
-        
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            animation: fadeIn 0.6s ease forwards;
         }
         
         @keyframes fadeIn {
@@ -118,8 +95,8 @@
         }
         
         .fade-in:nth-child(1) { animation-delay: 0.1s; }
-        .fade-in:nth-child(2) { animation-delay: 0.2s; }
-        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(2) { animation-delay: 0.15s; }
+        .fade-in:nth-child(3) { animation-delay: 0.2s; }
     </style>
 </head>
 <body>
@@ -130,104 +107,105 @@
         
         <!-- Navigation -->
         <nav class="flex justify-between items-center mb-20 fade-in">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
+            <a href="index.html" class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
                 I
-            </div>
+            </a>
             <div class="space-x-10 text-sm">
-                <a href="index.html" class="nav-link active">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="experience.html" class="nav-link">Experience</a>
                 <a href="projects.html" class="nav-link">Projects</a>
                 <a href="cv.html" class="nav-link">CV</a>
-                <a href="thoughts.html" class="nav-link">Thoughts</a>
+                <a href="thoughts.html" class="nav-link active">Thoughts</a>
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <section class="mb-20 fade-in">
-            <h1 class="text-7xl font-bold mb-8 tracking-tight">
-                Hi, I'm Ivy
-            </h1>
-            
-            <div class="space-y-8 text-xl text-zinc-300 max-w-3xl">
-                <div>
-                    <h2 class="text-3xl font-semibold mb-4 text-white">
-                        Currently
-                    </h2>
-                    <div class="pl-6 border-l-4 border-purple-500/50">
-                        <p class="mb-3 text-zinc-200">AI Product Specialist building intelligent workflows and RAG systems</p>
-                        <p class="text-zinc-400">Incoming Master's in Computer Science at <a href="https://www.nus.edu.sg" target="_blank" class="underline">National University of Singapore</a> (Aug 2026)</p>
-                    </div>
-                </div>
-
-                <div>
-                    <h2 class="text-3xl font-semibold mb-4 text-white">
-                        Previously
-                    </h2>
-                    <p class="text-zinc-400 leading-relaxed">
-                        AI Product Intern at <a href="#" class="underline">Guyu Biotechnology</a>, 
-                        AI Product Intern at <a href="#" class="underline">Sany Group</a>, and 
-                        Library Science at <a href="#" class="underline">Sun Yat-sen University</a>
-                    </p>
-                </div>
-
-                <div class="pt-6">
-                    <p class="text-zinc-400 leading-relaxed text-lg">
-                        I design AI systems that turn complex problems into elegant automations. 
-                        Experienced in building AI agents, optimizing RAG pipelines, and developing workflow automation. 
-                        Passionate about the intersection of technology and human-centered design.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Social Links -->
-            <div class="flex gap-4 mt-10">
-                <a href="mailto:zhusr1207@gmail.com" class="social-icon" title="Email">
-                    <i class="fa-solid fa-envelope text-lg"></i>
-                </a>
-                <a href="#" class="social-icon" title="GitHub">
-                    <i class="fa-brands fa-github text-lg"></i>
-                </a>
-                <a href="#" class="social-icon" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in text-lg"></i>
-                </a>
-            </div>
+        <!-- Page Header -->
+        <section class="mb-16 fade-in">
+            <h1 class="text-5xl font-bold mb-4">Thoughts & Reflections</h1>
+            <p class="text-zinc-400 text-lg">Ideas, perspectives, and things I'm thinking about</p>
         </section>
 
-        <!-- Contact / Message Section -->
-        <section class="mb-20 fade-in">
-            <div class="glass-card p-8">
-                <h2 class="text-2xl font-bold mb-4 text-white">Get in Touch</h2>
-                <p class="text-zinc-400 mb-6">Have a question or want to collaborate? Leave a message below.</p>
-                
-                <form class="space-y-4" id="contact-form">
+        <!-- Thoughts -->
+        <section class="space-y-8">
+            
+            <article class="glass-card fade-in">
+                <div class="flex justify-between items-start mb-4">
                     <div>
-                        <label class="block text-sm font-medium text-zinc-300 mb-2">Name</label>
-                        <input type="text" id="name" name="name" required 
-                            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-purple-500/50 focus:bg-white/8 transition-all"
-                            placeholder="Your name">
+                        <h2 class="text-2xl font-bold mb-2">The Future of AI Product Design</h2>
+                        <p class="text-zinc-500 text-sm">January 2026</p>
                     </div>
-                    <div>
-                        <label class="block text-sm font-medium text-zinc-300 mb-2">Email</label>
-                        <input type="email" id="email" name="email" required 
-                            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-purple-500/50 focus:bg-white/8 transition-all"
-                            placeholder="your@email.com">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-zinc-300 mb-2">Message</label>
-                        <textarea id="message" name="message" rows="4" required 
-                            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-purple-500/50 focus:bg-white/8 transition-all resize-none"
-                            placeholder="Your message..."></textarea>
-                    </div>
-                    <button type="submit" id="submit-btn"
-                        class="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
-                        Send Message
-                    </button>
-                </form>
-                
-                <div id="success-message" class="hidden mt-4 p-4 bg-green-500/10 border border-green-500/20 rounded-xl text-green-400 text-center">
-                    Message sent successfully! Thank you for your contact.I'll get back to you soon.
+                    <span class="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm">AI</span>
                 </div>
-            </div>
+                
+                <div class="text-zinc-300 leading-relaxed space-y-4">
+                    <p>
+                        As we move into an era where AI becomes ubiquitous, the challenge shifts from "can we build it?" to 
+                        "should we build it this way?" The best AI products are those that fade into the background, 
+                        enhancing human capabilities without demanding attention.
+                    </p>
+                    <p>
+                        In my work with RAG systems and AI agents, I've found that the magic happens not in the complexity 
+                        of the model, but in the elegance of the workflow. Users don't care about the technical details — 
+                        they care about whether their problem gets solved efficiently and reliably.
+                    </p>
+                    <p>
+                        The key insight: design for outcomes, not for technology.
+                    </p>
+                </div>
+            </article>
+
+            <article class="glass-card fade-in">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-2">Knowledge Organization in the Age of LLMs</h2>
+                        <p class="text-zinc-500 text-sm">December 2025</p>
+                    </div>
+                    <span class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm">Knowledge</span>
+                </div>
+                
+                <div class="text-zinc-300 leading-relaxed space-y-4">
+                    <p>
+                        My background in Library Science taught me that organizing knowledge is both an art and a science. 
+                        Now, with large language models, we're facing a paradigm shift: how do we structure information 
+                        when the retrieval mechanism is no longer keyword-based, but semantic?
+                    </p>
+                    <p>
+                        Traditional metadata schemas give way to embedding spaces. The challenge becomes designing knowledge 
+                        structures that are both human-understandable and machine-optimizable. This is where the intersection 
+                        of information science and AI becomes fascinating.
+                    </p>
+                    <p>
+                        The future belongs to those who can bridge these two worlds.
+                    </p>
+                </div>
+            </article>
+
+            <article class="glass-card fade-in">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold mb-2">Learning Through Building</h2>
+                        <p class="text-zinc-500 text-sm">November 2025</p>
+                    </div>
+                    <span class="bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm">Learning</span>
+                </div>
+                
+                <div class="text-zinc-300 leading-relaxed space-y-4">
+                    <p>
+                        The most effective way to learn is to build something real. Every project I've undertaken — from 
+                        the AI daily report generator to the e-commerce annotation workflow — has taught me more than 
+                        any tutorial ever could.
+                    </p>
+                    <p>
+                        There's a difference between knowing how something works and understanding why it works that way. 
+                        The latter only comes from wrestling with real problems, making mistakes, and iterating.
+                    </p>
+                    <p>
+                        My advice to anyone starting out: don't wait until you feel ready. Start building now. The gaps 
+                        in your knowledge will reveal themselves, and that's where the real learning begins.
+                    </p>
+                </div>
+            </article>
+
         </section>
 
         <!-- Footer -->

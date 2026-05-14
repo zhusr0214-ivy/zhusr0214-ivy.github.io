@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sirui Zhu (Ivy) | Home</title>
+    <title>CV | Sirui Zhu (Ivy)</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -14,12 +14,10 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
         }
         
         #earth-canvas {
@@ -49,7 +47,7 @@
         a {
             color: #a78bfa;
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.2s;
         }
         
         a:hover {
@@ -57,9 +55,8 @@
         }
         
         .nav-link {
-            color: rgba(255, 255, 255, 0.6);
-            transition: color 0.3s ease;
-            font-weight: 500;
+            color: #a1a1aa;
+            transition: color 0.2s;
             font-size: 0.95rem;
         }
         
@@ -67,47 +64,26 @@
             color: #ffffff;
         }
         
-        /* Apple-style glass morphism - reduced blur for better star visibility */
         .glass-card {
             background: rgba(255, 255, 255, 0.05);
             backdrop-filter: blur(20px) saturate(150%);
             -webkit-backdrop-filter: blur(20px) saturate(150%);
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .glass-card:hover {
             background: rgba(255, 255, 255, 0.08);
             border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-2px);
-        }
-        
-        .social-icon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 48px;
-            height: 48px;
-            border-radius: 14px;
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: #ffffff;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .social-icon:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.3);
-            transform: translateY(-3px) scale(1.05);
         }
         
         .fade-in {
             opacity: 0;
             transform: translateY(20px);
-            animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            animation: fadeIn 0.6s ease forwards;
         }
         
         @keyframes fadeIn {
@@ -118,8 +94,8 @@
         }
         
         .fade-in:nth-child(1) { animation-delay: 0.1s; }
-        .fade-in:nth-child(2) { animation-delay: 0.2s; }
-        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(2) { animation-delay: 0.15s; }
+        .fade-in:nth-child(3) { animation-delay: 0.2s; }
     </style>
 </head>
 <body>
@@ -130,108 +106,149 @@
         
         <!-- Navigation -->
         <nav class="flex justify-between items-center mb-20 fade-in">
-            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
+            <a href="index.html" class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
                 I
-            </div>
+            </a>
             <div class="space-x-10 text-sm">
-                <a href="index.html" class="nav-link active">Home</a>
+                <a href="index.html" class="nav-link">Home</a>
                 <a href="experience.html" class="nav-link">Experience</a>
                 <a href="projects.html" class="nav-link">Projects</a>
-                <a href="cv.html" class="nav-link">CV</a>
+                <a href="cv.html" class="nav-link active">CV</a>
                 <a href="thoughts.html" class="nav-link">Thoughts</a>
             </div>
         </nav>
 
-        <!-- Hero Section -->
-        <section class="mb-20 fade-in">
-            <h1 class="text-7xl font-bold mb-8 tracking-tight">
-                Hi, I'm Ivy
-            </h1>
-            
-            <div class="space-y-8 text-xl text-zinc-300 max-w-3xl">
-                <div>
-                    <h2 class="text-3xl font-semibold mb-4 text-white">
-                        Currently
-                    </h2>
-                    <div class="pl-6 border-l-4 border-purple-500/50">
-                        <p class="mb-3 text-zinc-200">AI Product Specialist building intelligent workflows and RAG systems</p>
-                        <p class="text-zinc-400">Incoming Master's in Computer Science at <a href="https://www.nus.edu.sg" target="_blank" class="underline">National University of Singapore</a> (Aug 2026)</p>
-                    </div>
-                </div>
-
-                <div>
-                    <h2 class="text-3xl font-semibold mb-4 text-white">
-                        Previously
-                    </h2>
-                    <p class="text-zinc-400 leading-relaxed">
-                        AI Product Intern at <a href="#" class="underline">Guyu Biotechnology</a>, 
-                        AI Product Intern at <a href="#" class="underline">Sany Group</a>, and 
-                        Library Science at <a href="#" class="underline">Sun Yat-sen University</a>
-                    </p>
-                </div>
-
-                <div class="pt-6">
-                    <p class="text-zinc-400 leading-relaxed text-lg">
-                        I design AI systems that turn complex problems into elegant automations. 
-                        Experienced in building AI agents, optimizing RAG pipelines, and developing workflow automation. 
-                        Passionate about the intersection of technology and human-centered design.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Social Links -->
-            <div class="flex gap-4 mt-10">
-                <a href="mailto:zhusr1207@gmail.com" class="social-icon" title="Email">
-                    <i class="fa-solid fa-envelope text-lg"></i>
-                </a>
-                <a href="#" class="social-icon" title="GitHub">
-                    <i class="fa-brands fa-github text-lg"></i>
-                </a>
-                <a href="#" class="social-icon" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin-in text-lg"></i>
-                </a>
+        <!-- CV Header -->
+        <section class="mb-12 fade-in">
+            <h1 class="text-5xl font-bold mb-4">Curriculum Vitae</h1>
+            <p class="text-zinc-400 text-lg">Sirui Zhu (Ivy)</p>
+            <div class="flex gap-6 mt-4 text-zinc-400">
+                <span><i class="fa-solid fa-envelope mr-2"></i>zhusr1207@gmail.com</span>
+                <span><i class="fa-solid fa-location-dot mr-2"></i>Guangzhou / Singapore</span>
             </div>
         </section>
 
-        <!-- Contact / Message Section -->
-        <section class="mb-20 fade-in">
-            <div class="glass-card p-8">
-                <h2 class="text-2xl font-bold mb-4 text-white">Get in Touch</h2>
-                <p class="text-zinc-400 mb-6">Have a question or want to collaborate? Leave a message below.</p>
-                
-                <form class="space-y-4" id="contact-form">
+        <!-- Education -->
+        <section class="glass-card fade-in">
+            <h2 class="text-2xl font-bold mb-6 text-white">Education</h2>
+            
+            <div class="mb-6 pb-6 border-b border-zinc-700">
+                <div class="flex justify-between items-start mb-2">
                     <div>
-                        <label class="block text-sm font-medium text-zinc-300 mb-2">Name</label>
-                        <input type="text" id="name" name="name" required 
-                            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-purple-500/50 focus:bg-white/8 transition-all"
-                            placeholder="Your name">
+                        <h3 class="text-xl font-semibold text-white mb-1">National University of Singapore</h3>
+                        <p class="text-purple-400">School of Computing | Computer Science (Master's)</p>
                     </div>
+                    <span class="text-zinc-400 text-sm">2026.08 →</span>
+                </div>
+                <p class="text-zinc-500 text-sm mt-2">Incoming Master's Student</p>
+            </div>
+
+            <div>
+                <div class="flex justify-between items-start mb-2">
                     <div>
-                        <label class="block text-sm font-medium text-zinc-300 mb-2">Email</label>
-                        <input type="email" id="email" name="email" required 
-                            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-purple-500/50 focus:bg-white/8 transition-all"
-                            placeholder="your@email.com">
+                        <h3 class="text-xl font-semibold text-white mb-1">Sun Yat-sen University</h3>
+                        <p class="text-zinc-400">School of Information Management | Library Science</p>
+                        <p class="text-zinc-500 text-sm mt-1">GPA: 3.8/4.0</p>
                     </div>
+                    <span class="text-zinc-400 text-sm">2022.09 — 2026.06</span>
+                </div>
+                <div class="mt-4 space-y-2 text-zinc-400 text-sm">
+                    <p><strong class="text-zinc-300">Major Courses:</strong> Advanced Mathematics, Java Programming, Computer Networks, Information Retrieval, Information Description, Information Classification and Indexing, Data Visualization</p>
+                    <p><strong class="text-zinc-300">Honors:</strong> Third-Class Scholarship of Sun Yat-sen University, Bibliotheca Library Science Scholarship, Second Prize in Guangdong International Speech and Debate Championship</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Internship Experience -->
+        <section class="glass-card fade-in">
+            <h2 class="text-2xl font-bold mb-6 text-white">Internship Experience</h2>
+            
+            <div class="mb-8 pb-8 border-b border-zinc-700">
+                <div class="flex justify-between items-start mb-3">
                     <div>
-                        <label class="block text-sm font-medium text-zinc-300 mb-2">Message</label>
-                        <textarea id="message" name="message" rows="4" required 
-                            class="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-zinc-500 focus:outline-none focus:border-purple-500/50 focus:bg-white/8 transition-all resize-none"
-                            placeholder="Your message..."></textarea>
+                        <h3 class="text-xl font-semibold text-white mb-1">Guyu Biotechnology Co. Ltd</h3>
+                        <p class="text-purple-400 font-medium">AI Product Intern</p>
                     </div>
-                    <button type="submit" id="submit-btn"
-                        class="w-full py-3 bg-purple-600 hover:bg-purple-700 text-white font-medium rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98]">
-                        Send Message
-                    </button>
-                </form>
-                
-                <div id="success-message" class="hidden mt-4 p-4 bg-green-500/10 border border-green-500/20 rounded-xl text-green-400 text-center">
-                    Message sent successfully! Thank you for your contact.I'll get back to you soon.
+                    <span class="text-zinc-400 text-sm">2026.03 — 2026.06</span>
+                </div>
+                <ul class="text-zinc-400 text-sm space-y-2 mt-3">
+                    <li>• Independently led end-to-end development of AI annotation workflow for e-commerce reviews, covering business requirement discussion, technical solution design, Coze workflow development, testing, optimization, and final delivery coordination</li>
+                    <li>• Developed internal AI Agent based on structured JSON datasets by building knowledge base and implementing retrieval, query, and response generation workflows</li>
+                    <li>• Assisted in enterprise knowledge base construction and optimization by developing and fine-tuning Agents and Skills for structured information extraction and business-oriented data processing</li>
+                    <li>• Evaluated vendor AI solutions for SCRM projects from technical and product implementation perspectives, assessing system stability, deployment feasibility, delivery timeline, and business alignment</li>
+                </ul>
+            </div>
+
+            <div>
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-1">Sany Group Co. Ltd</h3>
+                        <p class="text-purple-400 font-medium">AI Product Intern</p>
+                    </div>
+                    <span class="text-zinc-400 text-sm">2025.03 — 2025.06</span>
+                </div>
+                <ul class="text-zinc-400 text-sm space-y-2 mt-3">
+                    <li>• As a core member, built an AI daily report generation website from scratch using Make workflows — from user needs research, workflow link design, large model API calls, RAG data collection and cleaning, prompt writing and optimization, to website frontend design</li>
+                    <li>• Participated in the iteration of intelligent robot product lines, using the PEST model to analyze industry policies and technological trends (AI algorithms in robotics), compiled competitor feature and market feedback reports to support product development</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section class="glass-card fade-in">
+            <h2 class="text-2xl font-bold mb-6 text-white">Projects</h2>
+            
+            <div>
+                <div class="flex justify-between items-start mb-2">
+                    <div>
+                        <h3 class="text-xl font-semibold text-white mb-1">Research on AI Application Scenarios in Chinese Provincial Public Libraries</h3>
+                        <p class="text-purple-400 text-sm">Independent Research Project</p>
+                    </div>
+                    <span class="text-zinc-400 text-sm">2025.11 — 2026.05</span>
+                </div>
+                <ul class="text-zinc-400 text-sm space-y-2 mt-3">
+                    <li>• Researched AI application scenarios in provincial public libraries, covering AI assistants, intelligent search, recommendation systems, and LLM-based knowledge services</li>
+                    <li>• Analyzed how large-scale knowledge systems integrate AI technology into user interaction, information retrieval, business processes, and digital service experiences</li>
+                    <li>• Identified challenges in AI implementation including knowledge organization, retrieval accuracy, data quality, and human-machine collaboration in complex service scenarios</li>
+                    <li>• Proposed optimization strategies for AI-driven knowledge services including RAG-enhanced workflows, intelligent interaction design, and iterative feedback mechanisms</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="glass-card fade-in">
+            <h2 class="text-2xl font-bold mb-6 text-white">Skills & Expertise</h2>
+            
+            <div class="grid md:grid-cols-2 gap-6 text-sm">
+                <div>
+                    <h3 class="font-semibold text-purple-400 mb-2">Programming Languages</h3>
+                    <p class="text-zinc-400">Python, SQL</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-purple-400 mb-2">AI/LLM Technologies</h3>
+                    <p class="text-zinc-400">Prompt Engineering, RAG, AI Agent Workflows, Knowledge Base Design, LLM Evaluation</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-purple-400 mb-2">Workflow Automation</h3>
+                    <p class="text-zinc-400">Make, Coze, Dify</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-purple-400 mb-2">Technical Skills</h3>
+                    <p class="text-zinc-400">REST APIs, JSON Processing, Data Annotation, Workflow Orchestration</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-purple-400 mb-2">Development Tools</h3>
+                    <p class="text-zinc-400">VS Code, Codex, Qoder, Git</p>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-purple-400 mb-2">Languages & Interests</h3>
+                    <p class="text-zinc-400">IELTS 6.5 | Photography, Travel, Board Games, Escape Rooms</p>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="text-center text-zinc-500 text-sm mt-20 py-8 border-t border-white/10">
+        <footer class="text-center text-zinc-500 text-sm mt-12 py-8 border-t border-white/10">
             <p>© 2026 Sirui Zhu (Ivy)</p>
         </footer>
 
