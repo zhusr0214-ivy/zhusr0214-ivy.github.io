@@ -15,18 +15,15 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: #ffffff;
+            color: #1a1a1a;
+            background: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
         }
         
+        /* Remove earth canvas */
         #earth-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
+            display: none;
         }
         
         .content {
@@ -58,13 +55,13 @@
         }
         
         a {
-            color: #a78bfa;
+            color: #2563eb;
             text-decoration: none;
             transition: all 0.2s;
         }
         
         a:hover {
-            opacity: 0.8;
+            color: #1d4ed8;
         }
         
         .nav-link {
@@ -74,18 +71,16 @@
         }
         
         .nav-link:hover, .nav-link.active {
-            color: #ffffff;
+            color: #1e293b;
         }
         
         /* Language switch button */
         .lang-switch {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 8px;
             padding: 6px 14px;
-            color: rgba(255, 255, 255, 0.8);
+            color: #475569;
             font-size: 0.85rem;
             font-weight: 500;
             cursor: pointer;
@@ -93,8 +88,9 @@
         }
         
         .lang-switch:hover {
-            background: rgba(255, 255, 255, 0.15);
-            color: #ffffff;
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+            color: #1e293b;
         }
         
         .glass-card {
@@ -109,8 +105,8 @@
         }
         
         .glass-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
         }
         
         .fade-in {
@@ -175,9 +171,17 @@
             }
             
             .social-icon {
-                width: 44px;
-                height: 44px;
-            }
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            transition: all 0.3s ease;
+        }
             
             .form-input, .form-textarea {
                 font-size: 16px !important;
@@ -230,7 +234,7 @@
         
         <!-- Navigation -->
         <nav class="flex justify-between items-center mb-20 fade-in">
-            <a href="index.html" class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
+            <a href="index.html" class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-gray-900 font-bold text-xl">
                 I
             </a>
                                     <div class="nav-links space-x-10 text-sm">
@@ -247,8 +251,8 @@
         <!-- CV Header -->
         <section class="mb-12 fade-in">
             <h1 class="text-5xl font-bold mb-4">Curriculum Vitae</h1>
-            <p class="text-zinc-400 text-lg">Sirui Zhu (Ivy)</p>
-            <div class="flex gap-6 mt-4 text-zinc-400">
+            <p class="text-gray-600 text-lg">Sirui Zhu (Ivy)</p>
+            <div class="flex gap-6 mt-4 text-gray-600">
                 <span><i class="fa-solid fa-envelope mr-2"></i>zhusr1207@gmail.com</span>
                 <span><i class="fa-solid fa-location-dot mr-2"></i>Guangzhou / Singapore</span>
             </div>
@@ -256,48 +260,48 @@
 
         <!-- Education -->
         <section class="glass-card fade-in">
-            <h2 class="text-2xl font-bold mb-6 text-white">Education</h2>
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">Education</h2>
             
             <div class="mb-6 pb-6 border-b border-zinc-700">
                 <div class="flex justify-between items-start mb-2">
                     <div>
-                        <h3 class="text-xl font-semibold text-white mb-1">National University of Singapore</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1">National University of Singapore</h3>
                         <p class="text-purple-400">School of Computing | Computer Science (Master's)</p>
                     </div>
-                    <span class="text-zinc-400 text-sm">2026.08 →</span>
+                    <span class="text-gray-600 text-sm">2026.08 →</span>
                 </div>
-                <p class="text-zinc-500 text-sm mt-2">Incoming Master's Student</p>
+                <p class="text-gray-500 text-sm mt-2">Incoming Master's Student</p>
             </div>
 
             <div>
                 <div class="flex justify-between items-start mb-2">
                     <div>
-                        <h3 class="text-xl font-semibold text-white mb-1">Sun Yat-sen University</h3>
-                        <p class="text-zinc-400">School of Information Management | Library Science</p>
-                        <p class="text-zinc-500 text-sm mt-1">GPA: 3.8/4.0</p>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1">Sun Yat-sen University</h3>
+                        <p class="text-gray-600">School of Information Management | Library Science</p>
+                        <p class="text-gray-500 text-sm mt-1">GPA: 3.8/4.0</p>
                     </div>
-                    <span class="text-zinc-400 text-sm">2022.09 — 2026.06</span>
+                    <span class="text-gray-600 text-sm">2022.09 — 2026.06</span>
                 </div>
-                <div class="mt-4 space-y-2 text-zinc-400 text-sm">
-                    <p><strong class="text-zinc-300">Major Courses:</strong> Advanced Mathematics, Java Programming, Computer Networks, Information Retrieval, Information Description, Information Classification and Indexing, Data Visualization</p>
-                    <p><strong class="text-zinc-300">Honors:</strong> Third-Class Scholarship of Sun Yat-sen University, Bibliotheca Library Science Scholarship, Second Prize in Guangdong International Speech and Debate Championship</p>
+                <div class="mt-4 space-y-2 text-gray-600 text-sm">
+                    <p><strong class="text-gray-700">Major Courses:</strong> Advanced Mathematics, Java Programming, Computer Networks, Information Retrieval, Information Description, Information Classification and Indexing, Data Visualization</p>
+                    <p><strong class="text-gray-700">Honors:</strong> Third-Class Scholarship of Sun Yat-sen University, Bibliotheca Library Science Scholarship, Second Prize in Guangdong International Speech and Debate Championship</p>
                 </div>
             </div>
         </section>
 
         <!-- Internship Experience -->
         <section class="glass-card fade-in">
-            <h2 class="text-2xl font-bold mb-6 text-white">Internship Experience</h2>
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">Internship Experience</h2>
             
             <div class="mb-8 pb-8 border-b border-zinc-700">
                 <div class="flex justify-between items-start mb-3">
                     <div>
-                        <h3 class="text-xl font-semibold text-white mb-1">Guyu Biotechnology Co. Ltd</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1">Guyu Biotechnology Co. Ltd</h3>
                         <p class="text-purple-400 font-medium">AI Product Intern</p>
                     </div>
-                    <span class="text-zinc-400 text-sm">2026.03 — 2026.06</span>
+                    <span class="text-gray-600 text-sm">2026.03 — 2026.06</span>
                 </div>
-                <ul class="text-zinc-400 text-sm space-y-2 mt-3">
+                <ul class="text-gray-600 text-sm space-y-2 mt-3">
                     <li>• Independently led end-to-end development of AI annotation workflow for e-commerce reviews, covering business requirement discussion, technical solution design, Coze workflow development, testing, optimization, and final delivery coordination</li>
                     <li>• Developed internal AI Agent based on structured JSON datasets by building knowledge base and implementing retrieval, query, and response generation workflows</li>
                     <li>• Assisted in enterprise knowledge base construction and optimization by developing and fine-tuning Agents and Skills for structured information extraction and business-oriented data processing</li>
@@ -308,12 +312,12 @@
             <div>
                 <div class="flex justify-between items-start mb-3">
                     <div>
-                        <h3 class="text-xl font-semibold text-white mb-1">Sany Group Co. Ltd</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1">Sany Group Co. Ltd</h3>
                         <p class="text-purple-400 font-medium">AI Product Intern</p>
                     </div>
-                    <span class="text-zinc-400 text-sm">2025.03 — 2025.06</span>
+                    <span class="text-gray-600 text-sm">2025.03 — 2025.06</span>
                 </div>
-                <ul class="text-zinc-400 text-sm space-y-2 mt-3">
+                <ul class="text-gray-600 text-sm space-y-2 mt-3">
                     <li>• As a core member, built an AI daily report generation website from scratch using Make workflows — from user needs research, workflow link design, large model API calls, RAG data collection and cleaning, prompt writing and optimization, to website frontend design</li>
                     <li>• Participated in the iteration of intelligent robot product lines, using the PEST model to analyze industry policies and technological trends (AI algorithms in robotics), compiled competitor feature and market feedback reports to support product development</li>
                 </ul>
@@ -322,17 +326,17 @@
 
         <!-- Projects -->
         <section class="glass-card fade-in">
-            <h2 class="text-2xl font-bold mb-6 text-white">Projects</h2>
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">Projects</h2>
             
             <div>
                 <div class="flex justify-between items-start mb-2">
                     <div>
-                        <h3 class="text-xl font-semibold text-white mb-1">Research on AI Application Scenarios in Chinese Provincial Public Libraries</h3>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-1">Research on AI Application Scenarios in Chinese Provincial Public Libraries</h3>
                         <p class="text-purple-400 text-sm">Independent Research Project</p>
                     </div>
-                    <span class="text-zinc-400 text-sm">2025.11 — 2026.05</span>
+                    <span class="text-gray-600 text-sm">2025.11 — 2026.05</span>
                 </div>
-                <ul class="text-zinc-400 text-sm space-y-2 mt-3">
+                <ul class="text-gray-600 text-sm space-y-2 mt-3">
                     <li>• Researched AI application scenarios in provincial public libraries, covering AI assistants, intelligent search, recommendation systems, and LLM-based knowledge services</li>
                     <li>• Analyzed how large-scale knowledge systems integrate AI technology into user interaction, information retrieval, business processes, and digital service experiences</li>
                     <li>• Identified challenges in AI implementation including knowledge organization, retrieval accuracy, data quality, and human-machine collaboration in complex service scenarios</li>
@@ -343,38 +347,38 @@
 
         <!-- Skills -->
         <section class="glass-card fade-in">
-            <h2 class="text-2xl font-bold mb-6 text-white">Skills & Expertise</h2>
+            <h2 class="text-2xl font-bold mb-6 text-gray-900">Skills & Expertise</h2>
             
             <div class="grid md:grid-cols-2 gap-6 text-sm">
                 <div>
                     <h3 class="font-semibold text-purple-400 mb-2">Programming Languages</h3>
-                    <p class="text-zinc-400">Python, SQL</p>
+                    <p class="text-gray-600">Python, SQL</p>
                 </div>
                 <div>
                     <h3 class="font-semibold text-purple-400 mb-2">AI/LLM Technologies</h3>
-                    <p class="text-zinc-400">Prompt Engineering, RAG, AI Agent Workflows, Knowledge Base Design, LLM Evaluation</p>
+                    <p class="text-gray-600">Prompt Engineering, RAG, AI Agent Workflows, Knowledge Base Design, LLM Evaluation</p>
                 </div>
                 <div>
                     <h3 class="font-semibold text-purple-400 mb-2">Workflow Automation</h3>
-                    <p class="text-zinc-400">Make, Coze, Dify</p>
+                    <p class="text-gray-600">Make, Coze, Dify</p>
                 </div>
                 <div>
                     <h3 class="font-semibold text-purple-400 mb-2">Technical Skills</h3>
-                    <p class="text-zinc-400">REST APIs, JSON Processing, Data Annotation, Workflow Orchestration</p>
+                    <p class="text-gray-600">REST APIs, JSON Processing, Data Annotation, Workflow Orchestration</p>
                 </div>
                 <div>
                     <h3 class="font-semibold text-purple-400 mb-2">Development Tools</h3>
-                    <p class="text-zinc-400">VS Code, Codex, Qoder, Git</p>
+                    <p class="text-gray-600">VS Code, Codex, Qoder, Git</p>
                 </div>
                 <div>
                     <h3 class="font-semibold text-purple-400 mb-2">Languages & Interests</h3>
-                    <p class="text-zinc-400">IELTS 6.5 | Photography, Travel, Board Games, Escape Rooms</p>
+                    <p class="text-gray-600">IELTS 6.5 | Photography, Travel, Board Games, Escape Rooms</p>
                 </div>
             </div>
         </section>
 
         <!-- Footer -->
-        <footer class="text-center text-zinc-500 text-sm mt-12 py-8 border-t border-white/10">
+        <footer class="text-center text-gray-500 text-sm mt-12 py-8 border-t border-gray-200">
             <p>© 2026 Sirui Zhu (Ivy)</p>
         </footer>
 
@@ -719,6 +723,15 @@
         
         // Add event listener
         document.getElementById('contact-form').addEventListener('submit', handleSubmit);
+
+        // Language switching
+        let currentLang = localStorage.getItem('lang') || 'en';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            localStorage.setItem('lang', currentLang);
+            location.reload();
+        }
 </script>
 
 </body>

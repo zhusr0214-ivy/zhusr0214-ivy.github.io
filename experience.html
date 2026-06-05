@@ -15,20 +15,17 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
-            color: #ffffff;
+            color: #1a1a1a;
+            background: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
         
+        /* Remove earth canvas */
         #earth-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
+            display: none;
         }
         
         .content {
@@ -60,35 +57,33 @@
         }
         
         a {
-            color: #a78bfa;
+            color: #2563eb;
             text-decoration: none;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         a:hover {
-            opacity: 0.8;
+            color: #1d4ed8;
         }
         
         .nav-link {
-            color: rgba(255, 255, 255, 0.6);
+            color: #64748b;
             transition: color 0.3s ease;
             font-weight: 500;
             font-size: 0.95rem;
         }
         
         .nav-link:hover, .nav-link.active {
-            color: #ffffff;
+            color: #1e293b;
         }
         
         /* Language switch button */
         .lang-switch {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 8px;
             padding: 6px 14px;
-            color: rgba(255, 255, 255, 0.8);
+            color: #475569;
             font-size: 0.85rem;
             font-weight: 500;
             cursor: pointer;
@@ -96,25 +91,23 @@
         }
         
         .lang-switch:hover {
-            background: rgba(255, 255, 255, 0.15);
-            color: #ffffff;
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+            color: #1e293b;
         }
         
-        /* Apple-style glass morphism - reduced blur for better star visibility */
+        /* Clean business card style */
         .glass-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px) saturate(150%);
-            -webkit-backdrop-filter: blur(20px) saturate(150%);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
-            padding: 2.5rem;
-            margin-bottom: 2.5rem;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
         }
         
         .glass-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
         }
         
         .fade-in {
@@ -179,9 +172,17 @@
             }
             
             .social-icon {
-                width: 44px;
-                height: 44px;
-            }
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            transition: all 0.3s ease;
+        }
             
             .form-input, .form-textarea {
                 font-size: 16px !important;
@@ -234,7 +235,7 @@
         
         <!-- Navigation -->
         <nav class="flex justify-between items-center mb-20 fade-in">
-            <a href="index.html" class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
+            <a href="index.html" class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-gray-900 font-bold text-xl">
                 I
             </a>
                                     <div class="nav-links space-x-10 text-sm">
@@ -251,7 +252,7 @@
         <!-- Page Header -->
         <section class="mb-16 fade-in">
             <h1 class="text-5xl font-bold mb-4">Experience</h1>
-            <p class="text-zinc-400 text-lg">Professional journey and internships</p>
+            <p class="text-gray-600 text-lg">Professional journey and internships</p>
         </section>
 
         <!-- Experience -->
@@ -261,22 +262,22 @@
                 <div class="flex justify-between items-start mb-6">
                     <div>
                         <h2 class="text-3xl font-bold mb-3">Guyu Biotechnology</h2>
-                        <p class="text-zinc-400">AI Product Intern | 2026.03 - 2026.06</p>
+                        <p class="text-gray-600">AI Product Intern | 2026.03 - 2026.06</p>
                     </div>
-                    <span class="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium">AI Agent</span>
+                    <span class="bg-blue-100 text-purple-400 px-4 py-2 rounded-full text-sm font-medium">AI Agent</span>
                 </div>
                 
-                <div class="text-zinc-300 leading-relaxed space-y-4">
-                    <h3 class="text-xl font-semibold text-white mt-2 mb-3">Key Responsibilities</h3>
+                <div class="text-gray-700 leading-relaxed space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 mt-2 mb-3">Key Responsibilities</h3>
                     
-                    <ul class="list-disc ml-6 space-y-2 text-zinc-400">
+                    <ul class="list-disc ml-6 space-y-2 text-gray-600">
                         <li>Led end-to-end development of AI annotation workflow for e-commerce user reviews using Coze platform, from business requirement analysis to technical solution design</li>
                         <li>Built internal AI Agent with structured JSON datasets, developing knowledge base with retrieval, query, and response generation workflows</li>
                         <li>Optimized enterprise knowledge base for structured information extraction and automated data processing</li>
                         <li>Evaluated vendor AI solutions for SCRM (Social Customer Relationship Management) projects, providing technical recommendations</li>
                     </ul>
                     
-                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Impact</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">Impact</h3>
                     <p>
                         Streamlined the review annotation process, reducing manual effort and improving consistency 
                         in categorizing e-commerce feedback for product insights.
@@ -296,15 +297,15 @@
                 <div class="flex justify-between items-start mb-6">
                     <div>
                         <h2 class="text-3xl font-bold mb-3">Sany Group</h2>
-                        <p class="text-zinc-400">AI Product Intern | 2025.03 - 2025.06</p>
+                        <p class="text-gray-600">AI Product Intern | 2025.03 - 2025.06</p>
                     </div>
-                    <span class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium">Automation</span>
+                    <span class="bg-blue-100 text-blue-400 px-4 py-2 rounded-full text-sm font-medium">Automation</span>
                 </div>
                 
-                <div class="text-zinc-300 leading-relaxed space-y-4">
-                    <h3 class="text-xl font-semibold text-white mt-2 mb-3">Key Responsibilities</h3>
+                <div class="text-gray-700 leading-relaxed space-y-4">
+                    <h3 class="text-xl font-semibold text-gray-900 mt-2 mb-3">Key Responsibilities</h3>
                     
-                    <ul class="list-disc ml-6 space-y-2 text-zinc-400">
+                    <ul class="list-disc ml-6 space-y-2 text-gray-600">
                         <li>Built an AI daily report generation website from scratch using Make automation workflows, handling the entire development lifecycle</li>
                         <li>Conducted user needs research and designed workflow architecture to optimize report generation process</li>
                         <li>Integrated LLM APIs and implemented RAG (Retrieval-Augmented Generation) data collection and cleaning pipeline</li>
@@ -312,7 +313,7 @@
                         <li>Designed and developed the website frontend with user-friendly interface</li>
                     </ul>
                     
-                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Impact</h3>
+                    <h3 class="text-xl font-semibold text-gray-900 mt-6 mb-3">Impact</h3>
                     <p>
                         Automated the daily report generation workflow, saving significant manual effort and 
                         ensuring consistent quality in report formatting and content.
@@ -331,7 +332,7 @@
         </section>
 
         <!-- Footer -->
-        <footer class="text-center text-zinc-500 text-sm mt-20 py-8 border-t border-white/10">
+        <footer class="text-center text-gray-500 text-sm mt-20 py-8 border-t border-gray-200">
             <p>© 2026 Sirui Zhu (Ivy)</p>
         </footer>
 
@@ -676,6 +677,61 @@
         
         // Add event listener
         document.getElementById('contact-form').addEventListener('submit', handleSubmit);
+        
+        // Language switching
+        let currentLang = localStorage.getItem('lang') || 'en';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            localStorage.setItem('lang', currentLang);
+            location.reload();
+        }
+        
+        function applyLanguage() {
+            if (currentLang === 'zh') {
+                // Navigation
+                document.querySelector('a[href="index.html"]').textContent = '首页';
+                document.querySelector('a[href="experience.html"]').textContent = '经历';
+                document.querySelector('a[href="projects.html"]').textContent = '项目';
+                document.querySelector('a[href="cv.html"]').textContent = '简历';
+                document.querySelector('a[href="thoughts.html"]').textContent = '思考';
+                
+                // Page header
+                document.querySelector('h1.text-5xl').textContent = '经历';
+                document.querySelector('p.text-gray-600.text-lg').textContent = '专业历程与实习经历';
+                
+                // Guyu
+                document.querySelectorAll('article')[0].querySelector('h2').textContent = '谷雨生物';
+                document.querySelectorAll('article')[0].querySelectorAll('p')[0].textContent = 'AI产品实习生 | 2026.03 - 2026.06';
+                document.querySelectorAll('article')[0].querySelector('[class*="bg-purple"]').textContent = 'AI智能体';
+                document.querySelectorAll('article')[0].querySelectorAll('h3')[0].textContent = '主要职责';
+                const guyuList = document.querySelectorAll('article')[0].querySelectorAll('li');
+                guyuList[0].textContent = '使用Coze平台领导电商用户评论AI标注工作流的端到端开发，从业务需求分析到技术方案设计';
+                guyuList[1].textContent = '构建内部AI智能体，使用结构化JSON数据集，开发包含检索、查询和响应生成工作流的知识库';
+                guyuList[2].textContent = '优化企业知识库以进行结构化信息提取和自动化数据处理';
+                guyuList[3].textContent = '评估SCRM（社交客户关系管理）项目的供应商AI解决方案，提供技术建议';
+                document.querySelectorAll('article')[0].querySelectorAll('h3')[1].textContent = '影响力';
+                document.querySelectorAll('article')[0].querySelector('[class*="text-gray-700"]').querySelectorAll('p')[1].textContent = '简化了评论标注流程，减少人工工作量，提高电商反馈分类的一致性，为产品洞察提供支持。';
+                
+                // Sany
+                document.querySelectorAll('article')[1].querySelector('h2').textContent = '三一集团';
+                document.querySelectorAll('article')[1].querySelectorAll('p')[0].textContent = 'AI产品实习生 | 2025.03 - 2025.06';
+                document.querySelectorAll('article')[1].querySelector('[class*="bg-blue"]').textContent = '自动化';
+                document.querySelectorAll('article')[1].querySelectorAll('h3')[0].textContent = '主要职责';
+                const sanyList = document.querySelectorAll('article')[1].querySelectorAll('li');
+                sanyList[0].textContent = '使用Make自动化工作流从零构建AI日报生成网站，处理整个开发生命周期';
+                sanyList[1].textContent = '进行用户需求调研，设计工作流架构以优化报告生成流程';
+                sanyList[2].textContent = '集成LLM API，实现RAG（检索增强生成）数据收集和清洗管道';
+                sanyList[3].textContent = '通过迭代测试优化提示词，显著提高输出质量和一致性';
+                sanyList[4].textContent = '设计和开发网站前端，打造用户友好的界面';
+                document.querySelectorAll('article')[1].querySelectorAll('h3')[1].textContent = '影响力';
+                document.querySelectorAll('article')[1].querySelector('[class*="text-gray-700"]').querySelectorAll('p')[1].textContent = '自动化了日报生成工作流，节省大量人工工作，确保报告格式和内容的一致质量。';
+            }
+        }
+        
+        if (currentLang !== 'en') {
+            applyLanguage();
+        }
 </script>
 
 </body>

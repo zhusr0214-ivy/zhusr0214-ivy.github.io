@@ -15,18 +15,15 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: #ffffff;
+            color: #1a1a1a;
+            background: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
         }
         
+        /* Remove earth canvas */
         #earth-canvas {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
+            display: none;
         }
         
         .content {
@@ -58,13 +55,13 @@
         }
         
         a {
-            color: #a78bfa;
+            color: #2563eb;
             text-decoration: none;
             transition: all 0.2s;
         }
         
         a:hover {
-            opacity: 0.8;
+            color: #1d4ed8;
         }
         
         .nav-link {
@@ -74,18 +71,16 @@
         }
         
         .nav-link:hover, .nav-link.active {
-            color: #ffffff;
+            color: #1e293b;
         }
         
         /* Language switch button */
         .lang-switch {
-            background: rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 8px;
             padding: 6px 14px;
-            color: rgba(255, 255, 255, 0.8);
+            color: #475569;
             font-size: 0.85rem;
             font-weight: 500;
             cursor: pointer;
@@ -93,8 +88,9 @@
         }
         
         .lang-switch:hover {
-            background: rgba(255, 255, 255, 0.15);
-            color: #ffffff;
+            background: #f1f5f9;
+            border-color: #cbd5e1;
+            color: #1e293b;
         }
         
         /* Apple-style glass morphism - reduced blur for better star visibility */
@@ -176,9 +172,17 @@
             }
             
             .social-icon {
-                width: 44px;
-                height: 44px;
-            }
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            transition: all 0.3s ease;
+        }
             
             .form-input, .form-textarea {
                 font-size: 16px !important;
@@ -231,7 +235,7 @@
         
         <!-- Navigation -->
         <nav class="flex justify-between items-center mb-20 fade-in">
-            <a href="index.html" class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-blue-500 flex items-center justify-center text-white font-bold text-xl">
+            <a href="index.html" class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 flex items-center justify-center text-gray-900 font-bold text-xl">
                 I
             </a>
                                     <div class="nav-links space-x-10 text-sm">
@@ -248,7 +252,7 @@
         <!-- Page Header -->
         <section class="mb-16 fade-in">
             <h1 class="text-5xl font-bold mb-4">Projects</h1>
-            <p class="text-zinc-400 text-lg">Coming soon - detailed project showcases</p>
+            <p class="text-gray-600 text-lg">Coming soon - detailed project showcases</p>
         </section>
 
         <!-- Placeholder Content -->
@@ -258,12 +262,12 @@
                 <div class="flex justify-between items-start mb-6">
                     <div>
                         <h2 class="text-3xl font-bold mb-3">AI-Powered Library Services Research</h2>
-                        <p class="text-zinc-400">Independent Research | 2025.11 - 2026.05</p>
+                        <p class="text-gray-600">Independent Research | 2025.11 - 2026.05</p>
                     </div>
-                    <span class="bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium">Research</span>
+                    <span class="bg-green-100 text-green-400 px-4 py-2 rounded-full text-sm font-medium">Research</span>
                 </div>
                 
-                <div class="text-zinc-300 leading-relaxed space-y-4">
+                <div class="text-gray-700 leading-relaxed space-y-4">
                     <p>
                         Investigated how AI transforms public library services — from intelligent search to recommendation 
                         systems, and from AI assistants to LLM-based knowledge services. Analyzed challenges in knowledge 
@@ -284,12 +288,12 @@
                 <div class="flex justify-between items-start mb-6">
                     <div>
                         <h2 class="text-3xl font-bold mb-3">Project Title 2</h2>
-                        <p class="text-zinc-400">Description or category | Date range</p>
+                        <p class="text-gray-600">Description or category | Date range</p>
                     </div>
-                    <span class="bg-purple-500/20 text-purple-400 px-4 py-2 rounded-full text-sm font-medium">Tag</span>
+                    <span class="bg-blue-100 text-purple-400 px-4 py-2 rounded-full text-sm font-medium">Tag</span>
                 </div>
                 
-                <div class="text-zinc-300 leading-relaxed space-y-4">
+                <div class="text-gray-700 leading-relaxed space-y-4">
                     <p>
                         Project description will be added here. This is a placeholder for your upcoming project showcase. 
                         You can include details about the challenge, solution, technologies used, and outcomes.
@@ -307,12 +311,12 @@
                 <div class="flex justify-between items-start mb-6">
                     <div>
                         <h2 class="text-3xl font-bold mb-3">Project Title 2</h2>
-                        <p class="text-zinc-400">Description or category | Date range</p>
+                        <p class="text-gray-600">Description or category | Date range</p>
                     </div>
-                    <span class="bg-blue-500/20 text-blue-400 px-4 py-2 rounded-full text-sm font-medium">Tag</span>
+                    <span class="bg-blue-100 text-blue-400 px-4 py-2 rounded-full text-sm font-medium">Tag</span>
                 </div>
                 
-                <div class="text-zinc-300 leading-relaxed space-y-4">
+                <div class="text-gray-700 leading-relaxed space-y-4">
                     <p>
                         Another project showcase will be added here. Feel free to customize the content, 
                         add images, links, or any other relevant information about your projects.
@@ -329,12 +333,12 @@
                 <div class="flex justify-between items-start mb-6">
                     <div>
                         <h2 class="text-3xl font-bold mb-3">Project Title 3</h2>
-                        <p class="text-zinc-400">Description or category | Date range</p>
+                        <p class="text-gray-600">Description or category | Date range</p>
                     </div>
-                    <span class="bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium">Tag</span>
+                    <span class="bg-green-100 text-green-400 px-4 py-2 rounded-full text-sm font-medium">Tag</span>
                 </div>
                 
-                <div class="text-zinc-300 leading-relaxed space-y-4">
+                <div class="text-gray-700 leading-relaxed space-y-4">
                     <p>
                         Third project placeholder. You can add as many projects as you need, 
                         each with its own unique details and showcase elements.
@@ -351,7 +355,7 @@
         </section>
 
         <!-- Footer -->
-        <footer class="text-center text-zinc-500 text-sm mt-20 py-8 border-t border-white/10">
+        <footer class="text-center text-gray-500 text-sm mt-20 py-8 border-t border-gray-200">
             <p>© 2026 Sirui Zhu (Ivy)</p>
         </footer>
 
@@ -696,6 +700,40 @@
         
         // Add event listener
         document.getElementById('contact-form').addEventListener('submit', handleSubmit);
+
+        // Language switching
+        let currentLang = localStorage.getItem('lang') || 'en';
+        
+        function toggleLanguage() {
+            currentLang = currentLang === 'en' ? 'zh' : 'en';
+            localStorage.setItem('lang', currentLang);
+            location.reload();
+        }
+        
+        function applyLanguage() {
+            if (currentLang === 'zh') {
+                document.querySelector('a[href="index.html"]').textContent = '首页';
+                document.querySelector('a[href="experience.html"]').textContent = '经历';
+                document.querySelector('a[href="projects.html"]').textContent = '项目';
+                document.querySelector('a[href="cv.html"]').textContent = '简历';
+                document.querySelector('a[href="thoughts.html"]').textContent = '思考';
+                
+                document.querySelector('h1.text-5xl').textContent = '项目';
+                document.querySelector('p.text-gray-600.text-lg').textContent = '精选作品与案例研究';
+                
+                document.querySelectorAll('h2.text-3xl')[0].textContent = 'AI驱动的图书馆服务研究';
+                document.querySelectorAll('.text-gray-600')[2].textContent = '独立研究 | 2025.11 - 2026.05';
+                document.querySelectorAll('.bg-indigo-500\\/20')[0].textContent = '研究';
+                document.querySelectorAll('article p.text-gray-700')[0].textContent = '调查AI技术在公共图书馆服务中的应用，分析AI在用户交互和信息检索中的转型潜力。研究了知识组织和检索准确性方面的挑战，提出了基于RAG的工作流优化方案。';
+                
+                document.querySelectorAll('h2.text-3xl')[1].textContent = '更多项目即将推出';
+                document.querySelectorAll('.text-gray-600')[4].textContent = '我正在开发更多有趣的AI项目';
+            }
+        }
+        
+        if (currentLang !== 'en') {
+            applyLanguage();
+        }
 </script>
 
 </body>
