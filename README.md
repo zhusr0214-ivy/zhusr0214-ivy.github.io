@@ -11,7 +11,7 @@
 </p>
 
 <p align="center">
-  🌐 <a href="https://zhusr0214-ivy.github.io">Portfolio</a> • 📧 <a href="mailto:zhusr1207@gmail.com">Email</a> • 💼 <a href="https://zhusr0214-ivy.github.io/cv.html">Resume</a>
+  🌐 <a href="https://zhusr0214-ivy.github.io">Portfolio</a> (🆕 White Business Style + EN/中文) • 📧 <a href="mailto:zhusr1207@gmail.com">Email</a> • 💼 <a href="https://zhusr0214-ivy.github.io/cv.html">Resume</a>
 </p>
 
 ---
@@ -172,5 +172,5 @@ I'm always open to interesting conversations and collaborations!
 
 <p align="center">
   <em>Thanks for visiting! Feel free to reach out — I'd love to connect.</em><br>
-  <sub>Last updated: February 2026</sub>
+  <sub>Last updated: January 2026 | 🆕 Portfolio: White Business Minimalist Style + Bilingual (EN/中文)</sub>
 </p>
