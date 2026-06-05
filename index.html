@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sirui Zhu (Ivy) | Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
@@ -14,7 +15,7 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
             color: #1a1a1a;
             background: #ffffff;
             line-height: 1.6;
@@ -81,53 +82,97 @@
         .lang-switch {
             background: #f8fafc;
             border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 6px 14px;
+            border-radius: 12px;
+            padding: 8px 16px;
             color: #475569;
             font-size: 0.85rem;
             font-weight: 500;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .lang-switch:hover {
-            background: #f1f5f9;
-            border-color: #cbd5e1;
-            color: #1e293b;
+            background: #eff6ff;
+            border-color: #bfdbfe;
+            color: #2563eb;
+            transform: translateY(-2px);
         }
         
-        /* Clean business card style */
+        /* Modern card style with colorful backgrounds */
         .glass-card {
             background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f5f9;
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            padding: 32px;
         }
         
         .glass-card:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+        
+        /* Colorful card variants */
+        .card-blue {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-color: #bfdbfe;
+        }
+        
+        .card-green {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-color: #bbf7d0;
+        }
+        
+        .card-purple {
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+            border-color: #e9d5ff;
+        }
+        
+        .card-orange {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+            border-color: #fed7aa;
+        }
+        
+        /* Colorful card variants */
+        .card-blue {
+            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+            border-color: #bfdbfe;
+        }
+        
+        .card-green {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-color: #bbf7d0;
+        }
+        
+        .card-purple {
+            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+            border-color: #e9d5ff;
+        }
+        
+        .card-orange {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+            border-color: #fed7aa;
         }
         
         .social-icon {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 48px;
-            height: 48px;
-            border-radius: 10px;
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
             background: #f8fafc;
             border: 1px solid #e2e8f0;
             color: #475569;
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
         .social-icon:hover {
-            background: #f1f5f9;
-            border-color: #cbd5e1;
+            background: #eff6ff;
+            border-color: #bfdbfe;
             color: #2563eb;
-            transform: translateY(-3px);
+            transform: translateY(-4px) scale(1.05);
         }
         
         .fade-in {
@@ -204,9 +249,17 @@
             
             /* Social icons */
             .social-icon {
-                width: 44px;
-                height: 44px;
-            }
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 52px;
+            border-radius: 16px;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
             
             /* Form */
             .form-input, .form-textarea {
@@ -326,7 +379,7 @@
 
         <!-- Contact / Message Section -->
         <section class="mb-20 fade-in">
-            <div class="glass-card p-8">
+            <div class="glass-card card-blue">
                 <h2 class="text-2xl font-bold mb-4 text-gray-900">Get in Touch</h2>
                 <p class="text-gray-600 mb-6">Have a question or want to collaborate? Leave a message below.</p>
                 
